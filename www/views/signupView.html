@@ -1,0 +1,62 @@
+<div data-role="view" id="signup" data-layout="default" class="signup-view" data-model="app.Signup" data-init="app.Signup.init" data-show="app.Signup.show" data-hide="app.Signup.hide">
+    <div data-role="header">
+        <div data-role="navbar">
+            <img src="styles/images/scapin-blu.png" class="newlogo" />
+            <a class="nav-button nav-button-icon nav-button-back-d hide-text" data-align="left" data-role="backbutton" href="#welcome">Back</a>
+        </div>
+    </div>
+    <form id="signUp">
+        <ul id="signup-form" data-role="listview" data-style="inset">
+            <li>
+                <input type="text" id="signupName" data-bind="value: DisplayName" name="name" placeholder="Nome"  CssClass="textControl">
+                <span style="color:red;display:none;">Il nome è obbligatorio.</span>
+            </li>
+            <li>
+                <input type="text" id="signupEmail" data-bind="value: Email" placeholder="E-mail"   name="email" >
+                <span style="color:red;display:none;">Email non valida.</span>
+            </li>
+            <li>
+                <input type="text" id="signupUsername" data-bind="value: Username" placeholder="Nome Utente"   name="username" >
+                <span style="color:red;display:none;">Il nome utente dev'essere di almeno 6 caratteri.</span>
+                
+            </li>
+            <li>
+                <input type="password" id="signupPassword" data-bind="value: Password" placeholder="Password"  name="password" >
+                <span style="color:red;display:none;">La password dev'essere di almeno 6 caratteri.</span>
+            </li>
+            <li>
+                <span class="defaultPadding">Data di Nascita:</span>
+                <input type="date" id="signupBirthDatePicker" data-bind="value: BirthDate"  name="dob" >
+            </li>
+            <li class="select-wrp">
+                <span style="margin-left:10px;">Sesso:</span>
+                <select id="signupGenderPicker" data-bind="value: Gender" onchange="app.Signup.onSelectChange(this)"  name="gender" >
+                    <option >Maschio</option>
+                    <option >Femmina</option>
+                </select>
+            </li>
+            <li class="txtarea-wrp">
+                <textarea id="signupInfo" data-bind="value: About" placeholder="Descrizione"   name="desc" >Account utente creato con successo.</textarea>
+            </li>
+            <li style="width:100%;margin-bottom:5px" >
+
+                <div id="" class="oauth-item" data-role="touch" data-bind="events: { tap: capturePhotoWithData }" style="width:48.0%;display:inline-block;float:left">
+                    <a data-role="button" class="btn btn-facebook  " style="width:100%;font-size: 18px;">Scatta foto</a>
+                </div>
+
+                <div id="" class="oauth-item" data-role="touch" data-bind="events: { tap: capturePhotoWithFile }" style="width:48.0%;display:inline-block;float:right">
+                    <a data-role="button" class="btn btn-choose  " style="width:100%;font-size: 18px;">Seleziona foto</a>
+                </div>
+
+                <img style="display:none;width:100%; height:100%; max-height:200px;" id="largeImage"  src="../styles/images/ambiente.jpg"/>
+
+                <div id="image" style="width:100%;max-heigh:200px"></div>
+                <input type="hidden" id="imageValue"  name="image" />
+            </li>
+
+        </ul>
+    </form>
+    <div id="signupBtnWrp" class="signup-btn-wrp disabled">
+        <a class="btn btn-signup" data-role="button" data-bind="click: signup">Registrati</a>
+    </div>
+</div>

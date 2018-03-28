@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, target-densitydpi=medium-dpi, user-scalable=0" />
+    </head>
+
+    <body>
+        <div data-role="view" id="view-all-activities"  data-layout="default" class="activities-view" data-model="app.Activities" data-init="app.Activities.init">
+
+            <div data-role="header">
+                <div data-role="navbar">
+                    
+                    <img src="styles/images/scapin-blu.png" class="newlogo" />
+                    <a class="burger"data-role="button" href="#appDrawer" data-rel="drawer" data-align="left" data-icon="drawer-button"></a>
+                </div>
+            </div>
+
+
+        
+
+            <div id="mainContent">
+                <div style='text-align:center'>
+                    <div class="pagetitle">
+                        BAR VERONA
+                    </div>
+                    <p>Se vuoi richiedere delle informazioni, saremmo felici di aiutarvi in ogni vostra richiesta. </p>
+                    <p>
+                    <form id="messaggioPerEmail">
+                        <div>
+                            <div>
+                                <small>Il tuo nome</small> 
+                                <input type="text" id="emailName" class="emailName"></input>
+                                <label>Se questo campo è lasciato vuoto verra utilizzato l'username</label>
+                            </div>
+
+                            <div>
+                                <small for="emailMsg">Messaggio</small> 
+                                <input type="text" id="emailMsg" class="emailMsg"></input>
+                            </div>
+
+                            <div class="buttonActionView" style="margin-top:1em;>
+                                <span id="login" data-role="touch" data-bind="events: { tap: emailToSrv }">
+                                    <button type="button" onclick="appSettings.sendemail()">Invia</button>
+                                </span>
+                            </div>
+                        </div>
+                    </form>
+
+
+                    </p>
+                </div>
+        </div>
+        </div>
+
+
+    </body>
+
+</html>
+

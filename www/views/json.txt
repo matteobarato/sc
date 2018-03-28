@@ -1,0 +1,64 @@
+{
+    "results": [
+        {
+            "UserID": 1,
+            "PurchaseID": 7043
+        },
+        {
+            "UserID": 2,
+            "PurchaseID": 3584
+        },
+        {
+            "UserID": 3,
+            "PurchaseID": 7473
+        },
+        {
+            "UserID": 4,
+            "PurchaseID": 8654
+        },
+        {
+            "UserID": 5,
+            "PurchaseID": 9074
+        },
+        {
+            "UserID": 6,
+            "PurchaseID": 8243
+        },
+        {
+            "UserID": 7,
+            "PurchaseID": 9635
+        },
+        {
+            "UserID": 8,
+            "PurchaseID": 7543
+        },
+        {
+            "UserID": 9,
+            "PurchaseID": 5423
+        },
+        {
+            "UserID": 10,
+            "PurchaseID": 9883
+        },
+        {
+            "UserID": 11,
+            "PurchaseID": 1223
+        },
+        {
+            "UserID": 12,
+            "PurchaseID": 3253
+        },
+        {
+            "UserID": 13,
+            "PurchaseID": 6542
+        },
+        {
+            "UserID": 14,
+            "PurchaseID": 9875
+        },
+        {
+            "UserID": 15,
+            "PurchaseID": 1475
+        }
+    ]
+}

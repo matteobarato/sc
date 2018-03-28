@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Contact us</title>
+    </head>
+    <body>
+        <div id="profile-view" data-role="view" data-layout="default" data-model="app.Contact" data-init="app.Contact.init" data-show="app.Contact.show">
+            <div data-role="header">
+                <div data-role="navbar">
+                    <img src="styles/images/scapin-blu.png" class="newlogo" />
+                    <a class="nav-button nav-button-icon nav-button-back-d hide-text" data-align="left" data-role="backbutton" href="views/activitiesView.html">Back</a>
+                </div>
+            </div>
+            <div>
+
+                <h1 class=" icon ion-email " style=" font-size: 7rem;color: #9B9B9B;text-align:center" > </h1>
+
+                <h3 style="text-align:center;color:#3D3D3D">Scrivi allo staff di Scapin</h3>
+                <div class="list" style="padding:3px;padding-left:5px;padding-right:5px;">
+                    <form id="contactform">
+                        <label class="item item-input" style="margin-top:5px;">
+                            <input type="text" placeholder="Oggetto" name="subject">
+                        </label>
+
+                        <label class="item item-input" style="margin-top:15px;margin-bottom:30px;">
+                            <textarea placeholder="Messaggio" rows="6" name="message"></textarea>
+                        </label>
+                        <input type="hidden" name="userid" id="userid">
+                        
+                    </form>
+                    <button class="button button-positive" style="width:100%; margin-top:5px;" data-role="touch" data-bind="events: {tap:send}" >
+                            Invia
+                        </button>
+
+                </div>
+
+            </div>
+        </div>
+    </body>
+</html>

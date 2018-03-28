@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <div id="copuns-view" data-role="view" data-layout="default" data-model="app.Copuns" data-init="app.Copuns.init" data-show="app.Copuns.show">
+            <div data-role="header">
+                <div data-role="navbar">
+                    <img src="styles/images/scapin-blu.png" class="newlogo" />
+                    <a class="nav-button nav-button-icon nav-button-back-d hide-text" data-align="left" data-role="backbutton" href="views/activitiesView.html">Back</a>
+                </div>
+            </div>
+            <div class="picture-wrp">
+
+                <div style="" class="picture-container">
+                    <div id="picture-user-container" class="blured-picture picture-div" style="">
+
+                    </div>
+                    <img  alt="" align="middle" id ="picture-user" class="picture-user" src="../styles/images/avatar.png" style=""/>
+                    <h3 class="user-salutation">
+                        <span data-bind="text: DisplayName" id="UserDisplayName"></span>
+                    </h3>
+                </div>
+                <div class="user-info">
+                    <div class="user-avatar">
+
+                    </div>
+                    <div>
+                        <div class="col-6 scores" >
+                            <h5 class="centered">
+                                Punti Social
+                            </h5>
+                            <h5 id="socialPoints" class="centered" style="color:#E06470;" data-bind="text: SocialPoints">
+
+                            </h5>
+                        </div>
+                        <div class="col-6 scores">
+                            <h5 class="centered">
+                                Punti Totali
+                            </h5>
+                            <h5 id="totalPoints" class="centered" style="color:#3ACBA7;" data-bind="text: TotalPoints">
+
+                            </h5>
+                        </div>
+                    </div>
+                    <div data-role="touch" data-bind="events: { tap: activitySelectedsingle }">
+                         <h3 style="text-align:center;border-bottom:2px solid #D6D6D6;margin-top:10px;margin-bottom:10px;" >
+                        Scapin Coupon attivi
+                    </h3>
+                    </div>
+                   
+
+                    <!--  <span id="activityDate" class="time-span" data-bind="text: CreatedAtFormatted"></span>-->
+                </div>
+                <div>
+                    <ul id="copunsactivities-listview" data-style="inset" data-role="listview" style="padding-left:0px;padding-right:0px;margin-left:0px!important;margin-right:0px!important;" data-template="copuns-activityTemplate" data-bind="source: activities" data-pull-to-refresh="true"></ul>
+
+                    <p id="no-activities-span" hidden="hidden" class="no-items-msg">
+                        <b>Non hai coupon attivati.</b>
+                        <br>
+
+                    </p>
+                    <script type="text/x-kendo-template" id="copuns-activityTemplate">
+                        <img class="pullImage" src="" alt="" />
+                        <div class="mycopunscontainer col-12" style="padding-left:20px;padding-bottom:35px;"  data-role="touch" data-bind="events: { tap: activitySelectedsingle }" >
+                            <p style="padding-top:10px;" class="copunimagecontainer" >
+                                <img src= "#:PictureUrl()#" style="height:70px;width:70px;border-radius:100%;">
+                            </p>
+                            <p style="font-family: 'Rockwell';font-size:14px;">
+                                #:startdate() # - #: enddate()#
+                            </p>
+                            <p class="" style="font-weight:bold;color:black;font-family: 'Rockwell';" >#: Text #</p>
+                            <p style="font-family: 'Rockwell';"> </p>
+                        </div>
+
+                        <!--  
+                        <div >
+                        <img id="picture" class=""  style="width:70px;height:70px;border-radius:100%;display:inline-block;">
+                            
+                        </div>
+                        
+                        <div data-role="touch" data-bind="events: { tap: activitySelected }" class="cf" >
+
+                        <div class="activity-content">
+                        
+                        <div>
+                        <div class="topheader">
+                        <p class="user-share-txt">#: Text #</p>
+                        <span class="topheader-share  ion-android-share-alt "> </span>
+                        <span class="topheader-time"> x ore fa</span>
+                        </div>
+                        
+                        <div data-bind="visible: Picture" >
+                        <
+                        <div class="post-description">
+                        <p class="descriptiontext">#: Description #</p>
+                        <i class=""></i>
+
+                        </div>
+
+                        </div>
+
+                        </div>
+                        
+                        </div>
+                        </div>
+                        -->
+                    </script>
+                </div>
+            </div>
+        </div>
+
+
+    </body>
+</html>

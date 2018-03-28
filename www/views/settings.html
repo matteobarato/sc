@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title></title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="//kendo.cdn.telerik.com/2015.3.930/styles/kendo.common.min.css" />
+        <link rel="stylesheet" href="//kendo.cdn.telerik.com/2015.3.930/styles/kendo.default.min.css" />
+    </head>
+
+    <body id="friendsApp" data-layout="default">
+       
+        <!--WELCOME VIEW -->
+        <div data-role="view" data-layout="default" data-init="app.SettingsView.init" data-show="app.SettingsView.show" class="settings">
+            <div data-role="header">
+                <div data-role="navbar">
+                    <img src="styles/images/scapin-blu.png" class="newlogo" />
+                    <a class="nav-button nav-button-icon nav-button-back-d hide-text" data-align="left" data-role="backbutton" href="views/activitiesView.html">Back</a>
+                </div>
+            </div>
+            <h1 class=" ion-android-settings " style=" font-size: 7rem;color: #9B9B9B;text-align:center" > </h1>
+            <h3 style="text-align:center;color:#3D3D3D">
+                Impostazioni Pagina
+            </h3>
+            <ul style="color:#000;font-size:15px">
+                <li style="padding:10px;">
+                    <span>Notifiche Push </span>
+                    <span style="float:right">
+                        <input type="checkbox" id="pushEnabled" data-role="switch"  data-off-label="No" data-on-label="Sì" data-change="pushToggled" />
+
+                    </span>
+                </li>
+                 <li style="padding:10px;">
+                    <span style="">Link alla Privacy</span> <button style="float:right;background-color:#43B4F1;color:white;width:23%" onClick="openPrivacy()">Apri</button>
+                </li>
+                <li>
+                    <p style="padding:10px;">Versione Scapin App<span style="float:right">1.00</span> </p>
+                </li>
+
+            </ul>
+        </div>
+    </body>
+
+</html>

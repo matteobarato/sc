@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <title>Scapin Foto</title>
+        <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1"/>
+
+    </head>
+    <body >
+
+        <div data-role="view" data-layout="default" id="capturePage" data-model="app.Capture" data-init="app.Capture.init" data-show="app.Capture.show" class="scattafoto">
+            <div data-role="scroller" style="width: 100%; height: 100%" id="scroller">
+                <div data-role="header">
+                    <div data-role="navbar">
+                        <img src="styles/images/scapin-blu.png" class="newlogo" />
+                        <!--<a class="nav-button nav-button-icon nav-button-back-d hide-text" data-align="left" data-role="backbutton" href="views/activitiesView.html">Back</a>-->
+                        <a class="nav-button nav-button-icon nav-button-back-d hide-text" data-align="left" data-role="backbutton" href="views/activitiesView.html">Back</a>
+                    </div>
+                </div>
+                <div style="padding:3px;padding-left:5px;padding-right:5px;min-height: 50px;">
+
+                    <!--<button data-role="touch" data-bind="events: { tap: capturePhotoWithData }"  onclick="capturePhotoWithData();">Capture Photo With Image Data</button> <br> -->
+                    <div style="width:100%;margin-bottom:5px;" >
+
+                        <div id="" class="oauth-item" data-role="touch" data-bind="events: { tap: capturePhotoWithData }" style="width:49.0%;display:inline-block;float:left;margin-bottom:20px;margin-top:20px;">
+                            <a data-role="button" class="btn btn-facebook btnscatta" style="width:100%"></a>
+                        </div>
+
+                        <div id="" class="oauth-item" data-role="touch" data-bind="events: { tap: capturePhotoWithFile }" style="width:49.0%;display:inline-block;float:right;margin-bottom:20px;margin-top:20px;">
+                            <a data-role="button" class="btn btnseleziona" style="width:100%"></a>
+                        </div>
+
+                    </div>
+                    <div style="text-align:center">
+                        <img style="display:none;max-width:100%;height:auto; max-height:250px;" id="largeImage"  src="../styles/images/ambiente.jpg"/>
+                    </div>
+                </div>
+
+                <div style="width:100%;margin-bottom:5px;background:#DBD2CA;" >
+
+                    <div id="image" style="width:100%; height:100%"></div>
+                    <input type="hidden" id="imageValue"/>
+                    <p style="font-family:'Roboto';padding:5px;margin: 20px auto;width: 90%;text-align:justify;">
+                        Scatta o seleziona una foto inerente alla realtà Scapin, inserisci una descrizione e quindi caricala sul tuo profilo Facebook per ottenere 5 Punti Social.
+                    </p>
+                    <p style="font-family:'Roboto';padding:5px;margin: 20px auto;width: 90%;text-align:justify;">
+                        Offerta valida per un massimo di 5 foto al giorno!
+                    </p>
+                    <textarea  type="text" id="imageDescription" placeholder="Descrizione della foto" style="width:90%; margin: 20px auto;padding:10px;" max-length="1000" rows="6"></textarea >
+                    <span id="textAreaError" style="display:none;color:red;">Descrizione Obbligatoria.</span>
+                    <span id="" data-role="touch" data-bind="events: { tap: sharePhoto }" style="width:100%;">
+                        <a data-role="button" class="btn caricafoto" style="width:100%;"></a>
+                    </span>
+
+                </div>
+            </div>
+        </div>
+        <div id="appDrawer" data-role="drawer" data-title="Menù">
+            <header data-role="header">
+                <div data-role="navbar">
+                    <span data-role="view-title"></span>
+                </div>
+            </header>
+            <ul id="navigation-container" data-role="listview">
+                <li>
+                    <a href="views/activitiesView.html" data-transition="none">Dashboard</a>
+                </li>
+                <li>
+                    <a href="views/card.html" data-transition="none" >La mia tessera</a>
+                </li>
+                <li>
+                    <a href="views/myCopuns.html" data-transition="none">Coupon utilizzati</a>
+                </li>
+                <li>
+                    <a href="views/profile.html" data-transition="none" >Il mio profilo</a>
+                </li>
+                <li>
+                    <a href="views/socialspecific.html" data-transition="none">Classifica social</a>
+                </li>                
+                <li>
+                    <a href="views/settings.html" data-transition="none">Impostazioni</a>
+                </li>
+                <li>
+                    <a href="views/explain.html" data-transition="none">Come funziona?</a>
+                </li>
+                <li>
+                    <a href="views/support.html" data-transition="none">Assistenza tecnica</a>
+                </li>
+                <li>
+                    <a href="views/logout.html" data-transition="none">Disconnetti</a>
+                </li>
+            </ul>
+        </div>
+
+    </body>
+</html>

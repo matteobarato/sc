@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, target-densitydpi=medium-dpi, user-scalable=0" />
+        <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    </head>
+
+    <body>
+        <div data-role="view" id="view-all-activities"  data-layout="default" class="activities-view" data-model="app.Activities" data-init="app.Activities.init" data-show="app.Activities.show"  >
+            <div  style="" id="dashboardidentifier">
+                <div class="oriz_line"></div>
+                <!--div style="font-weight: 500;margin: auto;margin-top: 10px;letter-spacing: 3px;font-family: Quicksand4;">NEWS</div-->
+                <h2 class="pagetitle">NEWS</h2>
+
+
+            </div>
+            <div data-role="header">
+                <div data-role="navbar">
+                    
+                    <img src="styles/images/scapin-blu.png" class="newlogo" />
+                    <a class="burger"data-role="button" href="#appDrawer" data-rel="drawer" data-align="left" data-icon="drawer-button"></a>
+                </div>
+            </div>
+            <!---->
+            <ul id="activities-listview" data-style="inset" data-role="listview" data-template="activityTemplate" data-bind="source: activities" data-pull-template="<i>Pull to update the number</i>" data-pull-to-refresh="true"  data-pull-release-template="release" data-refresh-template="updating"></ul>
+
+            <p id="no-activities-span" hidden="hidden" class="no-items-msg">
+                <b>Non ci sono pubblicazioni.</b>
+                <br>
+
+            </p>
+        </div>
+        
+        <script id="tooltip-template" type="text/x-kendo-template">
+            <p>#=target.data('postedTime')#</p>
+        </script>
+
+        <script type="text/x-kendo-template" id="activityTemplate">
+
+            <div  class="cf" >
+                <div class="activity-content">
+                    <div>
+
+                        <div class="topheader news gradient titleFont">
+	                        <span class="topheader-share  " id="shared-main-#:itemIdentifier()#" style="#: sharedColor() #;background-image:url('styles/images/share_btn.png');display:none;" data-role="touch" data-bind="events: { tap: shareActivity }" > </span>
+                            <a class="topheader-time mockupTitle" title="#: createdAt #">#: postedTime #</a>
+                        </div>
+
+                        <dic class="activity-body" data-role="touch" data-bind="events: {tap:activitySelected}}">
+                            <div data-bind="visible: Picture" style="line-height: 180px;">
+                                <div class="image_conteiner" style="background-image: url('#: PictureUrl() #');background-repeat: round;height: 180px;">
+                                    <span class="descriptiontext mockuptest">#: Text #</span>
+                                </div>
+                            </div>
+                        </dic>
+
+                    </div>
+                </div>
+            </div>
+
+        </script>
+        <div id="appDrawer" data-role="drawer" data-title="Menù">
+            <header data-role="header">
+                <div data-role="navbar">
+                    <span data-role="view-title">
+                    
+                    </span>
+                </div>
+            </header>
+            <ul id="navigation-container" data-role="listview">
+                <li>
+                    <a href="views/activitiesView.html" data-transition="none">Dashboard</a>
+                </li>
+                <li>
+                    <a href="views/shops.html" data-transition="none" >Negozi</a>
+                </li>
+                <li>
+                    <a href="views/profile.html" data-transition="none" >Profilo</a>
+                </li>
+                <li>
+                    <a href="views/support.html" data-transition="none">Contatti</a>
+                </li>
+                <li>
+                    <a href="views/invita.html" data-transition="none">Invita un amico</a>
+                </li>
+                <li>
+                    <a href="views/logout.html" data-transition="none">Disconnetti</a>
+                </li>
+            </ul>
+        </div>
+
+     <div data-role="layout" data-id="default">
+            <div data-role="footer">
+                <div data-role="tabstrip" >
+
+                    <div class="footericoncontainer" style="position: relative;">
+                        <a id="" class="footer_icon footer_news" data-icon="home" href="views/activitiesView.html">
+                            <div>
+                                <div class="">
+                                    News
+                                </div>
+                                <div>
+                                    <img src="styles/images/icona-news.png"> 
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="footericoncontainer" style="position: relative;">
+                        <a id="" class="footer_icon footer_shops" href="views/shops.html">
+                            <div>
+                                <div>
+                                    Negozi
+                                </div>
+                                <div>
+                                    <img src="styles/images/icona-negozio.png">
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="footericoncontainer" style="position: relative;" onclick="loadshop();loadshop_sconto()"  data-role="touch">
+                        
+                        <a id="" class="footer_icon footer_shop" href="views/shop_sconto.html">
+                            <div>
+                                <div>
+                                    Sconto
+                                </div>
+                                <div>
+                                    
+                                    <img src="styles/images/icona-sconto.png">                             
+                                </div>
+                            </div>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+
+</html>
+

@@ -1,0 +1,71 @@
+{
+  "Framework": "Cordova",
+  "ProjectTypeGuids": "{070BCB52-5A75-4F8C-A973-144AF0EAFCC9}",
+  "FrameworkVersion": "6.4.0",
+  "ProjectName": "Sconto club",
+  "ProjectGuid": "9761ae18-25c4-402f-b11a-20b8bcc43495",
+  "projectVersion": "1",
+  "AppIdentifier": "com.telerik.Sconto",
+  "DisplayName": "Sconto Club",
+  "Author": "HelloCreativeStudio",
+  "Description": "Sconto Club",
+  "BundleVersion": "1.1",
+  "AndroidVersionCode": "205",
+  "iOSDeviceFamily": [
+    "1"
+  ],
+  "iOSBackgroundMode": [
+    "remote-notification"
+  ],
+  "AndroidPermissions": [
+    "android.permission.INTERNET",
+    "android.permission.SEND_SMS"
+  ],
+  "DeviceOrientations": [
+    "Portrait"
+  ],
+  "AndroidHardwareAcceleration": "true",
+  "iOSStatusBarStyle": "Default",
+  "WP8TileTitle": "",
+  "WP8Publisher": "",
+  "WP8Capabilities": [
+    "ID_CAP_NETWORKING",
+    "ID_CAP_WEBBROWSERCOMPONENT"
+  ],
+  "WP8Requirements": [],
+  "WP8PublisherID": "{1203ec27-e0e7-4795-a7f7-6cfefb2b657d}",
+  "WP8ProductID": "{4cb3fc0c-f71f-427a-876e-f92c04585638}",
+  "WPSdk": "8.0",
+  "WP8PackageIdentityName": "1234Telerik.TestHybrid",
+  "WP8WindowsPublisherName": "CN=Telerik",
+  "WP8SupportedResolutions": [
+    "ID_RESOLUTION_WVGA",
+    "ID_RESOLUTION_WXGA",
+    "ID_RESOLUTION_HD720P"
+  ],
+  "CorePlugins": [
+    "cordova-plugin-camera",
+    "cordova-plugin-console",
+    "cordova-plugin-device",
+    "cordova-plugin-device-motion",
+    "cordova-plugin-device-orientation",
+    "cordova-plugin-dialogs",
+    "cordova-plugin-file",
+    "cordova-plugin-file-transfer",
+    "cordova-plugin-geolocation",
+    "cordova-plugin-inappbrowser",
+    "cordova-plugin-media",
+    "cordova-plugin-media-capture",
+    "cordova-plugin-network-information",
+    "cordova-plugin-splashscreen",
+    "cordova-plugin-vibration",
+    "cordova-plugin-whitelist"
+  ],
+  "iOSDeploymentTarget": "9.0",
+  "CordovaPluginVariables": {
+    "com.phonegap.plugins.facebookconnect": {
+      "APP_ID": "827089710749375",
+      "APP_NAME": "ScapinApp"
+    }
+  }
+}

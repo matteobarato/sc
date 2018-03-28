@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, target-densitydpi=medium-dpi, user-scalable=0" />
+    </head>
+
+    <body>
+        <div data-role="view" id="view-all-notifictaions"  data-layout="default"  class="social-view"  data-model="app.SocialSpecifica" data-init="app.SocialSpecifica.init" data-show="app.SocialSpecifica.show"  >
+            <div  style="" id="socialsidentifier">
+
+            </div>
+            <div data-role="header">
+                <div data-role="navbar">
+                    <img src="styles/images/scapin-blu.png" class="newlogo" />
+                    <a class="nav-button nav-button-icon nav-button-back-d hide-text" data-align="left" data-role="backbutton" href="views/activitiesView.html">Back</a>
+                </div>
+            </div>
+            <!---->
+            <div class="classifica" style="margin-top:30px;">
+                
+            </div>
+            <h3 style="text-align:center;font-family:'Rockwell';">
+                Classifica Social
+            </h3>
+            <p style="text-align:center;font-family: 'Rockwell';">Mese di <i><span id="socialMonth" style="color:green;"> </span> </i></p>
+            <ul id="social-listview" style="margin:1rem;border:none;" data-style="inset" data-role="listview" data-pull-template="<i>Pull to update the number</i> " data-template="socialTemplate" data-bind="source: activities" data-pull-to-refresh="true"  data-pull-release-template="release" data-refresh-template="updating"></ul>
+
+            <p id="no-activities-span" hidden="hidden" class="no-items-msg">
+                <b>You have no posts yet.</b>
+                <br>
+
+            </p>
+        </div>
+
+        <script type="text/x-kendo-template" id="socialTemplate">
+            <img class="pullImage" src="" alt="" />
+            <div class="classwrap" style="padding-left:3px;padding-right:3px;clear:both;">
+                
+                
+                <div style="margin-right:1px;display:inline-block;text-allign:center;width:34%;float:left;">
+                    <img id="picture" class="picture" src="#:imageurl()#" style="width:100px;height:100px;border-radius:100%">
+                </div>
+
+                <div style="display:inline-block;margin-left:3px;width:63%;float:right;">
+                    <ul style="width:100%">
+                        <li>
+                            <p style="font-family: 'Rockwell';font-size:20px;"><b>#:name#</b></p>
+                        </li>
+                        <li>
+                            <ul style="width:100%;padding:6px;padding-top:8px;">
+                                <li style="font-family: 'Rockwell';font-size:15px;">
+                                    Punti Social
+                                </li>
+                                <li style="color:rgb(226,103,115);font-family: 'Rockwell';font-size:25px;">
+                                    #:social_points#
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                </div>
+                
+                
+                
+            </div>
+        </script>
+
+    </body>
+
+</html>

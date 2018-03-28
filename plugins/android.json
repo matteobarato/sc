@@ -1,0 +1,73 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.telerik.Sconto"
+        },
+        "cordova-plugin-camera": {
+            "PACKAGE_NAME": "com.telerik.Sconto"
+        },
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "com.telerik.Sconto"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.telerik.Sconto"
+        },
+        "cordova-plugin-device-motion": {
+            "PACKAGE_NAME": "com.telerik.Sconto"
+        },
+        "cordova-plugin-device-orientation": {
+            "PACKAGE_NAME": "com.telerik.Sconto"
+        },
+        "cordova-plugin-dialogs": {
+            "PACKAGE_NAME": "com.telerik.Sconto"
+        },
+        "cordova-plugin-file": {
+            "PACKAGE_NAME": "com.telerik.Sconto"
+        },
+        "cordova-plugin-file-transfer": {
+            "PACKAGE_NAME": "com.telerik.Sconto"
+        },
+        "cordova-plugin-geolocation": {
+            "PACKAGE_NAME": "com.telerik.Sconto"
+        },
+        "cordova-plugin-inappbrowser": {
+            "PACKAGE_NAME": "com.telerik.Sconto"
+        },
+        "cordova-plugin-media": {
+            "PACKAGE_NAME": "com.telerik.Sconto"
+        },
+        "cordova-plugin-media-capture": {
+            "PACKAGE_NAME": "com.telerik.Sconto"
+        },
+        "cordova-plugin-network-information": {
+            "PACKAGE_NAME": "com.telerik.Sconto"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "com.telerik.Sconto"
+        },
+        "cordova-plugin-vibration": {
+            "PACKAGE_NAME": "com.telerik.Sconto"
+        },
+        "com.phonegap.plugins.PushPlugin": {
+            "PACKAGE_NAME": "com.telerik.Sconto"
+        },
+        "com.telerik.cordovaPlatformSpecificFiles": {
+            "PACKAGE_NAME": "com.telerik.Sconto"
+        }
+    },
+    "dependent_plugins": {
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "com.telerik.Sconto"
+        },
+        "cordova-plugin-globalization": {
+            "PACKAGE_NAME": "com.telerik.Sconto"
+        }
+    }
+}

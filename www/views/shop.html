@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title></title>
+    </head>
+
+    <body>
+        <div data-role="view" id="single-activity" data-layout="default" class="activity-view singlec" data-init="app.Card.details" data-show="app.Card.details" >
+            <div data-role="header">
+                <div data-role="navbar">
+                    <img src="styles/images/scapin-blu.png" class="newlogo" />
+                    <a class="nav-button nav-button-icon nav-button-back-d hide-text" data-align="left" data-role="backbutton" href="views/shops.html">Back</a>
+                </div>
+            </div>
+
+  	<div class="wrapblockcoupon">
+
+        <div id="dashboardidentifier">
+            <div class="oriz_line"></div>
+            <!--div class="pagetitle">PUNTO VENDITA</div-->
+            <h2 class="pagetitle">PUNTO VENDITA</h2>
+        </div>
+
+        <div class="buttonActionView">
+            <select onchange="changeshop(this)">
+                <option selected disabled>Scegli un punto vendita<option>
+            </select>
+        </div>
+
+    <!-- shop -->
+
+    <div id="shop_cst_blur" class="picture-container" style="text-align:center!important;position:relative!important;box-shadow: 0px 5px 20px!important;width: 90%!important;margin: auto!important;">
+        <div id="picture-user-container" class="blured-picture picture-div shop_negozio"></div>
+        <span align="middle" id="picture-user" class="picture-user shop_profilo"></span>
+    </div>    
+    <div id="3_line_content" style="text-align: center;">
+        <div class="copunDescription mockuptext">
+            <p data-bind="text: Description" class="copunDescription"></p>
+        </div>
+
+
+
+        <div id="Profilo_shop" class="mockuptext" style="display: none;text-align: left;margin-left: 50px;margin-top: 20px;">
+
+        	<div id="orari">
+        		<p>Il punto vendita oggi è 
+        			<strong id="aperto" style="display: none; color: green"> Aperto</strong> 
+        			<c style="display: none;"><br>Dalle : <strong id="fascia1"> 00:00 </strong> Alle : <strong id="fascia2"> 00:00 </strong> </c>
+        			<strong id="chiuso" style="display: none;color: gray"> Chiuso</strong> 
+        		</p>
+        	</div>
+        	<div id="geo">
+        		<p>Via: <strong id="via"></strong></p>
+        		<p>Citta: <strong id="citta"></strong></p>
+        	</div>
+        	<div id="info">
+        		<p>Telefono: <strong id="tel"></strong></p>
+        		<p>Email: <strong id="email"></strong></p>
+        		
+        	</div>
+        </div>
+    </div>
+</div>
+
+
+
+   </body>
+</html>

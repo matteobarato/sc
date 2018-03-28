@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta charset="utf-8" />
+<meta http-equiv="Content-Security-Policy" content="default-src * gap://ready; style-src * 'unsafe-inline'; media-src *; script-src * 'unsafe-eval' 'unsafe-inline';img-src 'self' * data:;">
+         <script src="cordova.js"></script>
+        <script src="kendo/js/jquery.min.js"></script>
+        <script src="kendo/js/kendo.all.min.js"></script>
+        <script src="kendo/js/kendo.mobile.min.js"></script>
+        <script src="kendo/js/jquery-barcode.min.js"></script>
+        <script src="bower_components/everlive/min/everlive.all.min.js"></script>
+        <script src="scripts/app/identity-provider.js"></script>
+        <script src="scripts/app/settings.js"></script>
+        <script src="scripts/app/app.js"></script>
+        <script src="scripts/app/analytics-monitor.js"></script>
+        <script src="scripts/app/users.js"></script>
+        <script src="scripts/app/login.js"></script>
+        <script src="scripts/app/signup.js"></script>
+        <script src="scripts/app/activities.js"></script>
+        <script src="scripts/app/activity.js"></script>
+        <script src="scripts/app/comments.js"></script>
+        <script src="scripts/app/inviti.js"></script>
+        <script src="scripts/app/add-activity.js"></script>
+        <script src="scripts/app/add-comment.js"></script>
+        <script src="scripts/app/card.js"></script>
+        <script src="scripts/app/list.js"></script>
+        <script src="scripts/app/my-copuns.js"></script>
+        <script src="scripts/app/profile.js"></script>
+        <script src="scripts/app/contact.js"></script>
+        <script src="scripts/app/SettingsView.js"></script>
+        <script src="scripts/app/CaptureImage.js"></script>
+        <script src="scripts/app/notifications.js"></script>
+        <script src="scripts/app/socialspecific.js"></script>
+        <script src="scripts/app/logout.js"></script>
+        <script src="scripts/app/PushNotification.js"></script>
+        <script src="scripts/app/editProfile.js"></script>
+        <script src="scripts/app/ForgotPassword.js"></script>
+        <script src="scripts/app/watermark.min.js"></script>
+        <script src="scripts/app/watermark-polyfill.min.js"></script>
+        <script src="scripts/app/ionic.bundle.min.js"></script>
+        <script type="text/javascript" src="scripts/app/pubnub-3.7.4.min.js"></script>
+        <link href="styles/googlefontscss.css" rel="stylesheet">
+        <link rel="stylesheet" href="styles/kendo.common.min.css" />
+        <link rel="stylesheet" href="styles/kendo.default.min.css" />
+        <link href="kendo/styles/kendo.mobile.all.min.css" rel="stylesheet">
+        <link href="styles/main.css" rel="stylesheet">
+        <link href="styles/ionic.min.css" rel="stylesheet">
+        <link href="styles/font-awesome.min.css" rel="stylesheet">
+        
+    </head>
+    <body id="friendsApp">
+        <div data-role="layout" data-id="default">
+            <!--View content will render here-->
+        </div>
+        <!--WELCOME VIEW -->
+        <div data-role="view" id="welcome" data-layout="default" class="welcome-scrn form-view" data-model="app.Login" data-init="app.Login.init" data-show="app.Login.show">
+
+            <h2 class="app-name" style="margin: auto;display:none"></h2>
+            <div style="text-align: center;">
+                <img src="styles/images/demo_login.png" style="width:250px;"> 
+            <div>
+
+            </div
+            </div>
+            <form id="login-form">
+                <ul data-role="listview" data-style="inset">
+
+                    <li class="username">
+                        <input type="text" id="loginUsername" placeholder="Nome Utente" required validationMessage="Username is required!" value="darioagnmh181">
+
+                    </li>
+                    <li class="password">
+                        <input type="password" id="loginPassword" placeholder="Password" required validationMessage="Password is required!" value="d87f1c">
+                    </li>
+                    <li class="invito">
+                        <input style="padding-top: 25px;" type="text" id="invito" placeholder="Hai un codice invito?">
+                    </li>
+                    <li  style="height:42px;background:none;border:none" >
+                        <input type="checkbox" id="rememberMe" class="rememberme k-checkbox" name="rememberme" >
+                        <label class="k-checkbox-label rememberme" for="eq1" style="color:#000">Ricordami</label>
+                    </li>
+                
+                </ul>
+            </form>
+            </div>
+            <div>
+            <ol class="group-wrp">
+                <li>
+                    <span id="login" data-role="touch" data-bind="click: login">
+                        <a data-role="button" class="btn btn-login" data-bind="click: login">Accedi</a>
+                    </span>
+                </li>
+                <li class="signup">
+                    <p>Non hai un account?</p>
+                    <a data-role="" href="views/signupView.html" class="">Iscriviti</a>
+                </li>
+                <li class="signup">
+                    <p>Hai dimenticato la password?</p>
+                    <a data-role="" href="views/ForgetPassword.html" class="">MAIL</a>
+                </li>
+            </ol>
+            </div>
+            </div>
+        </div>
+    </body>
+</html>
